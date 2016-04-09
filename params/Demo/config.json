@@ -1,0 +1,6 @@
+{
+    "GLOBAL": {
+        "fxlist": "t.lst = [{fx: new Forest(ALL_PARAMS.FOREST), depth: 1000.0}];",
+        "fxlistIndex": 0
+    }
+}

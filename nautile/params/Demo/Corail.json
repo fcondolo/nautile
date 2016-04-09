@@ -1,0 +1,229 @@
+{
+    sequence:[
+
+    {
+        time : 0,
+        setting : "default"
+    }],
+textures:[
+
+    {
+        file : "data/space2.jpg",
+        friendly : "grounds"
+    },
+    {
+        file : "data/waternormal.png",
+        friendly : "normals"
+    },
+    {
+        file : "data/caustics.jpg",
+        friendly : "caustics"
+    }],
+fields:[
+
+    {
+        name : 'glowAmount',
+        editor : {type:'RGB', min:-2, max:2},
+        default_data : 
+            { values : [1.00, 1.00, 1.00],
+            }
+    },
+    {
+        name : 'glowColorSub',
+        editor : {type:'RGBA'},
+        default_data : 
+            { values : [0.18, 0.11, 0.13, 0.00],
+            }
+    },
+    {
+        name : 'glowBlurScale',
+        editor : {},
+        default_data : 
+            { values : [1.00, 1.00],
+            }
+    },
+    {
+        name : 'camPos',
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'camRot',
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'lightPosNormalized',
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'diffuseIntensity',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'diffuseColor',
+        default_data : 
+            { values : [1.00, 1.00, 1.00],
+            }
+    },
+    {
+        name : 'specularIntensity',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'specularColor',
+        default_data : 
+            { values : [1.00, 1.00, 1.00],
+            }
+    },
+    {
+        name : 'specularFallOff',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'focus',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'near',
+        default_data : 
+            { values : [0.00],
+            }
+    },
+    {
+        name : 'far',
+        default_data : 
+            { values : [50.00],
+            }
+    },
+    {
+        name : 'fogfar',
+        default_data : 
+            { values : [50.00],
+            }
+    }],
+settings:[
+{ Setting_Name: "default",
+curves: [
+
+    { // glowAmount
+        looping : false,
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 152.020063}
+        ]
+    },
+    { // glowColorSub
+        looping : false,
+        data : [
+            { values : [0.18, 0.11, 0.13, 0.00],
+            time : 152.020063}
+        ]
+    },
+    { // glowBlurScale
+        looping : false,
+        data : [
+            { values : [1.00, 1.00],
+            time : 152.020063}
+        ]
+    },
+    { // camPos
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 152.020063}
+        ]
+    },
+    { // camRot
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 152.020063}
+        ]
+    },
+    { // lightPosNormalized
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 152.020063}
+        ]
+    },
+    { // diffuseIntensity
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 152.020063}
+        ]
+    },
+    { // diffuseColor
+        looping : false,
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 152.020063}
+        ]
+    },
+    { // specularIntensity
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 152.020063}
+        ]
+    },
+    { // specularColor
+        looping : false,
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 152.020063}
+        ]
+    },
+    { // specularFallOff
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 152.020063}
+        ]
+    },
+    { // focus
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 152.020063}
+        ]
+    },
+    { // near
+        looping : false,
+        data : [
+            { values : [0.00],
+            time : 152.020063}
+        ]
+    },
+    { // far
+        looping : false,
+        data : [
+            { values : [50.00],
+            time : 152.020063}
+        ]
+    },
+    { // fogfar
+        looping : false,
+        data : [
+            { values : [50.00],
+            time : 152.020063}
+        ]
+    }
+]} // end of setting: default
+
+] // end of settings
+}

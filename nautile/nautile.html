@@ -1,0 +1,128 @@
+﻿    <html> 
+	<noscript> 
+		</br><h1>No Javascript, no demo!</h1></br> 
+		</br><h1>Javascript is disabled in your browser</h1></br> 
+	</noscript> 
+	</head>	 
+		<meta charset="utf-8">  
+		 
+		<!-- Engine scripts --> 
+		<script type="text/javascript" src="js/engine/paramsLoader.js"></script> 
+		<script type="text/javascript" src="js/engine/ResourceManager.js"></script> 
+		<script type="text/javascript" src="js/engine/QuadMesh.js"></script> 
+		<script type="text/javascript" src="js/engine/Text2d.js"></script> 
+		<script type="text/javascript" src="js/engine/Engine.js"></script> 
+		<script type="text/javascript" src="js/engine/jsTools.js"></script> 
+		<script type="text/javascript" src="js/engine/ShaderLoader.js"></script> 
+		<script type="text/javascript" src="js/engine/Texture.js"></script> 
+		<script type="text/javascript" src="js/engine/Interpolator.js"></script> 
+		<script type="text/javascript" src="js/engine/InterpolatorList.js"></script> 
+		<script type="text/javascript" src="js/engine/curve.js"></script> 
+		<script type="text/javascript" src="js/engine/BeatHandler.js"></script> 
+
+		<script type="text/javascript" src="js/fx/RaymarchFxSuite.js"></script> 
+        <script type="text/javascript" src="js/fx/LoadingBar.js"></script> 
+		<script type="text/javascript" src="js/fx/Haze.js"></script> 
+		<script type="text/javascript" src="js/fx/SeaTrees.js"></script> 
+		<script type="text/javascript" src="js/fx/CausticCity.js"></script> 
+		<script type="text/javascript" src="js/fx/Corail.js"></script> 
+		<script type="text/javascript" src="js/fx/Ocean.js"></script> 
+
+ 
+	 
+ 
+		<!-- Demo script --> 		
+		<script type="text/javascript" src="js/fx/BootBlock.js"></script> 
+		<script type="text/javascript" src="js/fx/RaymarchFXHelper.js"></script> 
+		<script type="text/javascript" src="js/LightInDarkness.js"></script> 
+		<script type="text/javascript" src="js/DemoParams.js"></script> 
+	head> 
+ 
+	<style> 
+		@font-face { 
+			font-family: "JSGL"; 
+			src: url("data/3rdparty/TW CEN FONT/Tw Cen MT.ttf");
+		} 
+		body { 
+		font-family: sans-serif; 
+        background-color: #000000;
+		} 
+	</style> 
+ 
+	<body 
+	onload="onPageLoaded();" 
+	> 
+		<script>FONT = "data/3rdparty/TW CEN FONT/Tw Cen MT.ttf";</script> 
+		<div id="start" style="position:fixed;z-index:0;left:0px; top:0px; width:100%; height: 100%; z-index=902; font-family:JSGL; background-color:#333333; color:#f3ffff; overflow:auto" > 
+		<center><img id='logo' src="data/editor/bank.png" /></center> 
+                <center>
+                    <font size="85">
+                        <h1>Nautile</h1>
+                    </font>
+                </center>
+            <br><br><br><center><button id="startBut" style="font-family:JSGL; font-size:30; background-color:#ff0000; color:#ffffff" onclick="document.getElementById('canvas_div').style.display='block'; document.getElementById('start').style.display='none'; document.getElementById('start').style.cursor='none'; demoInit(true);"> <h3>Invest Now !</h3></button></center> 
+		</div> 
+		<div id="canvas_div" style="JSGL: Dummy text to load font;position:fixed;z-index:0;left:0px; top:0px; display:none; cursor:none;"> 
+			<canvas id="canvas2d" width=1920 height=1080 style="z-index: 2; position:absolute; left:0px; top:0px;"> 
+            </canvas> 
+			<canvas id="canvas3d" width=1920 height=1080 style="z-index: 1; position:absolute; left:0px; top:0px;"> 
+            </canvas> 
+			<canvas id="spritesCanvas" width=1920 height=1080 style="z-index: 3; position:absolute; left:0px; top:0px;"> 
+            </canvas> 
+			<canvas id="frontCanvas" width=1920 height=1080 style="z-index: 4; position:absolute; left:0px; top:0px; font-family:JSGL;"> 
+            </canvas> 
+		</div>		 
+        <img id='nautile_logo' src="data/nautile_logo.png" style="display:none" />
+		<script> 
+			STARTIME = 0.0; 
+			RECORD = false; 
+			MUSIC = false; 
+			SESSION = 'Demo'; 
+
+            function check_xmlhttp_license() {
+                    var request = new XMLHttpRequest();
+                    request.rurl = "LICENSE.txt";
+                    request.open('GET', request.rurl, false);
+                    request.setRequestHeader('Cache-Control', 'no-cache');
+                    var hasError = true;
+                    try {
+                        request.send(null);
+                        hasError = false;
+                    } catch (e) {
+                        hasError = true;
+                    }
+                    if (request.status === 404)
+                        hasError = true;
+                    if (!request.responseText || request.responseText.length < 2)
+                        hasError = true;
+
+                    if (hasError)
+                        return false;
+                    return true;
+            }
+ 
+			 
+			function webgl_support() {  
+			   try{ 
+				var canvas = document.createElement( 'canvas' );  
+				return !! window.WebGLRenderingContext && (  
+					 canvas.getContext( 'webgl' ) || canvas.getContext( 'experimental-webgl' ) ); 
+			   }catch( e ) { return false; }  
+			 }; 
+			  
+			if (window.File && window.FileReader && window.FileList && window.Blob) { 
+			} else { 
+			  alert('The File APIs are not fully supported by your browser.'); 
+			} 
+			 if (!webgl_support()){ 
+			     alert('WEBGL IS NOT SUPPORTED, NO DEMO! WebGL is either not supported or not enabled by your browser');
+			     document.getElementById('startBut').style.display = 'none';
+			 } 
+            else if (!check_xmlhttp_license()) {
+                alert('Either you deleted file "LICENCE.txt", either XMLHttpRequest is not enabled by your browser (--allow-file-access-from-files). In both cases, it´s a show stopper!');
+                document.getElementById('startBut').style.display = 'none';
+            }  
+		 </script> 
+ </body> 
+</html> 
+

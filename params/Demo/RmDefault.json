@@ -1,0 +1,110 @@
+[
+    {
+        name : 'camPos',
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    },
+    {
+        name : 'camRot',
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    },
+    {
+        name : 'lightPosNormalized',
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    },
+    {
+        name : 'diffuseIntensity',
+        data : [
+            { values : [1.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    },
+    {
+        name : 'diffuseColor',
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    },
+    {
+        name : 'specularIntensity',
+        data : [
+            { values : [1.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    },
+    {
+        name : 'specularColor',
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    },
+    {
+        name : 'specularFallOff',
+        data : [
+            { values : [1.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    },
+    {
+        name : 'focus',
+        data : [
+            { values : [1.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    },
+    {
+        name : 'near',
+        data : [
+            { values : [0.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    },
+    {
+        name : 'far',
+        data : [
+            { values : [50.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    },
+    {
+        name : 'fogfar',
+        data : [
+            { values : [50.00],
+            time : 0.00,
+            type : 0
+			}
+        ]
+    }
+]

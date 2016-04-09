@@ -1,0 +1,434 @@
+{
+    sequence:[
+
+    {
+        time : 0,
+        setting : "default"
+    }],
+textures:[
+
+    {
+        file : "data/oceannoise.jpg",
+        friendly : "noise"
+    },
+    {
+        file: "data/oceanfoam7.jpg",
+        friendly: "caustics"
+    },
+    {
+        file : "data/waterdrops_normals9.jpg",
+        friendly : "waterdrops"
+    },
+    {
+        file : "data/oceanlogo.png",
+        friendly : "logo"
+    },
+    {
+        file : "data/lensflare.jpg",
+        friendly : "Lens"
+    }
+],
+fields:[
+
+    {
+        name : 'textureInfluence',
+        editor : {min:-5, max:5},
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'glowAmount',
+        editor : {type:'RGB', min:-2, max:2},
+        default_data : 
+            { values : [-1.00, -1.00, -1.00],
+            }
+    },
+    {
+        name : 'glowColorSub',
+        editor : {type:'RGBA'},
+        default_data : 
+            { values : [0.88, 0.88, 0.88, 0.00],
+            }
+    },
+    {
+        name : 'glowBlurScale',
+        editor : {},
+        default_data : 
+            { values : [2.41, 2.47],
+            }
+    },
+    {
+        name : 'noise1Base',
+        editor : {min:-5, max:5},
+        default_data : 
+            { values : [1.30],
+            }
+    },
+    {
+        name : 'noise1Spd',
+        editor : {min:0.001, max:1},
+        default_data : 
+            { values : [0.02, 0.02],
+            }
+    },
+    {
+        name : 'noise1Scale',
+        editor : {min:0.01, max:1},
+        default_data : 
+            { values : [0.22],
+            }
+    },
+    {
+        name : 'noise1W',
+        editor : {min:0.1, max:2},
+        default_data : 
+            { values : [0.70],
+            }
+    },
+    {
+        name : 'noise2Base',
+        editor : {min:-5, max:5},
+        default_data : 
+            { values : [2.63],
+            }
+    },
+    {
+        name : 'noise2Spd',
+        editor : {min:0.001, max:1},
+        default_data : 
+            { values : [0.02, 0.02],
+            }
+    },
+    {
+        name : 'noise2Scale',
+        editor : {min:0.3, max:6},
+        default_data : 
+            { values : [0.30],
+            }
+    },
+    {
+        name : 'noise2W',
+        editor : {min:0.1, max:2},
+        default_data : 
+            { values : [0.30],
+            }
+    },
+    {
+        name : 'ScrollSpd',
+        editor : {max:1},
+        default_data : 
+            { values : [0.00, 0.00, 0.30],
+            }
+    },
+    {
+        name : 'waveHeightSpd',
+        editor : {min:-3, max:3},
+        default_data : 
+            { values : [-1.50],
+            }
+    },
+    {
+        name : 'waveHeightStrength',
+        editor : {min:0.005, max:0.05},
+        default_data : 
+            { values : [0.01],
+            }
+    },
+    {
+        name : 'minWaveHeight',
+        editor : {min:1, max:10},
+        default_data : 
+            { values : [6.00],
+            }
+    },
+    {
+        name : 'RaymarchMinDistDistortion',
+        editor : {min:-1, max:1},
+        default_data : 
+            { values : [0.00],
+            }
+    },
+    {
+        name : 'camPos',
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'camRot',
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'lightPosNormalized',
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'diffuseIntensity',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'diffuseColor',
+        default_data : 
+            { values : [1.00, 1.00, 1.00],
+            }
+    },
+    {
+        name : 'specularIntensity',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'specularColor',
+        default_data : 
+            { values : [1.00, 1.00, 1.00],
+            }
+    },
+    {
+        name : 'specularFallOff',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'focus',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'near',
+        default_data : 
+            { values : [0.00],
+            }
+    },
+    {
+        name : 'far',
+        default_data : 
+            { values : [50.00],
+            }
+    },
+    {
+        name : 'fogfar',
+        default_data : 
+            { values : [50.00],
+            }
+    }],
+settings:[
+{ Setting_Name: "default",
+curves: [
+
+    { // textureInfluence
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 0}
+        ]
+    },
+    { // glowAmount
+        looping : false,
+        data : [
+            { values : [-1.00, -1.00, -1.00],
+            time : 0}
+        ]
+    },
+    { // glowColorSub
+        looping : false,
+        data : [
+            { values : [0.88, 0.88, 0.88, 0.00],
+            time : 0}
+        ]
+    },
+    { // glowBlurScale
+        looping : false,
+        data : [
+            { values : [2.41, 2.47],
+            time : 0}
+        ]
+    },
+    { // noise1Base
+        looping : false,
+        data : [
+            { values : [1.30],
+            time : 0}
+        ]
+    },
+    { // noise1Spd
+        looping : false,
+        data : [
+            { values : [0.02, 0.02],
+            time : 0}
+        ]
+    },
+    { // noise1Scale
+        looping : false,
+        data : [
+            { values : [0.22],
+            time : 0}
+        ]
+    },
+    { // noise1W
+        looping : false,
+        data : [
+            { values : [0.70],
+            time : 0}
+        ]
+    },
+    { // noise2Base
+        looping : false,
+        data : [
+            { values : [2.63],
+            time : 0}
+        ]
+    },
+    { // noise2Spd
+        looping : false,
+        data : [
+            { values : [0.02, 0.02],
+            time : 0}
+        ]
+    },
+    { // noise2Scale
+        looping : false,
+        data : [
+            { values : [0.30],
+            time : 0}
+        ]
+    },
+    { // noise2W
+        looping : false,
+        data : [
+            { values : [0.30],
+            time : 0}
+        ]
+    },
+    { // ScrollSpd
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.30],
+            time : 0}
+        ]
+    },
+    { // waveHeightSpd
+        looping : false,
+        data : [
+            { values : [-1.50],
+            time : 0}
+        ]
+    },
+    { // waveHeightStrength
+        looping : false,
+        data : [
+            { values : [0.01],
+            time : 0}
+        ]
+    },
+    { // minWaveHeight
+        looping : false,
+        data : [
+            { values : [6.00],
+            time : 0}
+        ]
+    },
+    { // RaymarchMinDistDistortion
+        looping : false,
+        data : [
+            { values : [0.00],
+            time : 0}
+        ]
+    },
+    { // camPos
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 0}
+        ]
+    },
+    { // camRot
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 0}
+        ]
+    },
+    { // lightPosNormalized
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 0}
+        ]
+    },
+    { // diffuseIntensity
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 0}
+        ]
+    },
+    { // diffuseColor
+        looping : false,
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 0}
+        ]
+    },
+    { // specularIntensity
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 0}
+        ]
+    },
+    { // specularColor
+        looping : false,
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 0}
+        ]
+    },
+    { // specularFallOff
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 0}
+        ]
+    },
+    { // focus
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 0}
+        ]
+    },
+    { // near
+        looping : false,
+        data : [
+            { values : [0.00],
+            time : 0}
+        ]
+    },
+    { // far
+        looping : false,
+        data : [
+            { values : [50.00],
+            time : 0}
+        ]
+    },
+    { // fogfar
+        looping : false,
+        data : [
+            { values : [50.00],
+            time : 0}
+        ]
+    }
+]} // end of setting: default
+
+] // end of settings
+}

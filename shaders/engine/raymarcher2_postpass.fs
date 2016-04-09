@@ -1,0 +1,153 @@
+/** 
+The MIT License (MIT)
+
+Copyright (c) 2016 Frederic Condolo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+**/
+
+/*
+===========================================================================
+                          OVERLOADABLE CONSTANTS
+===========================================================================
+*/
+
+// PI multiplied by 2
+#ifndef pi2
+	#define pi2 6.283185307179586476925286766559
+#endif
+
+// Max raymarch iterations
+#ifndef MAX_ITER
+	#define MAX_ITER 140
+#endif
+
+// Raymarch epsilon : Minimum distance to collision under which we consider the object is hit 
+// and ray-marching can be interrupted. Augment to optimize or use variable e.g: 0.0001 * (1.0+rmdata.curIterCount)
+#ifndef COLLISION_EPSILON
+	#define COLLISION_EPSILON 0.0001
+#endif
+
+// march: ray step length given scene distance. Default is h.d (distance to nearest primitive in scene).
+// To accelerate frame-rate, the dist can be amplified in function of the iteration, e.g: h.d * (1.0+rmdata.curIterCount*0.1)
+#ifndef MARCH
+	#define MARCH h.d
+#endif
+
+// function that will compute the fragment's color: col_diffuse, col_specular, or any overload
+#ifndef COLORIZE
+	#define COLORIZE col_specular
+#endif
+
+#ifndef COLLISION_TEST
+	#define COLLISION_TEST if (h.d < COLLISION_EPSILON) break;
+#endif
+
+// function that handles the scene
+#ifndef SCENE
+	#define SCENE sdSphere(_p, 0.5)
+#endif
+
+#ifndef COMPUTE_NORMAL
+	#define COMPUTE_NORMAL normal
+#endif
+
+#ifndef START_FX_FRAME
+	#define START_FX_FRAME
+#endif
+
+#ifndef MAINPROG
+	#define MAINPROG mainNormal
+#endif
+
+#ifndef START_DIST
+	#define START_DIST 0.0
+#endif
+
+#ifndef FAR_ALPHA
+#define FAR_ALPHA h.color.a = 0.0;
+#endif 
+
+
+#ifndef FOG_FAR
+#define FOG_FAR fogfar
+#endif
+
+#ifndef UNFOLD_Z
+#define UNFOLD_Z prepassData *= far;
+#endif
+
+
+#define DISABLE_DEFAULT_RAYMARCHER
+
+
+/*
+===========================================================================
+							RAYMARCHER CODE
+===========================================================================
+*/
+
+
+
+Hit scene(vec3 _p, float _d)
+{
+	int id = 0;	
+	float d = 100000.0;
+	vec4 col = vec4(1.0);
+
+	d = SCENE;
+	//col.a = clamp(1.0-(d/far), 0.0, 1.0);
+	return Hit(d, col, id, _p);
+}
+
+
+void mainNormal( ) 
+{
+        vec2 pos = (gl_FragCoord.xy*2.0 - iResolution.xy) / iResolution.y;
+
+	    rmdata.frag = vec2(gl_FragCoord.xy/iResolution.xy);
+	    vec4 prepassData = texture2D(uSampler1, rmdata.frag);
+        UNFOLD_Z
+	
+        #ifdef USE_MASKING
+	        vec4 mskCol = texture2D(uSampler0, rmdata.frag);
+	        if (mskCol.a > 0.999) {
+		        gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+	    } else 
+        #endif // USE_MASKING        
+        {
+    
+
+		MAIN_START
+	
+		START_FX_FRAME
+		rmdata.dist = START_DIST + prepassData.x;
+		rmdata.p += rmdata.dir * rmdata.dist;
+		h = scene(rmdata.p, rmdata.dist);
+		rmdata.fogFactor = max(0.0, 1.0 - rmdata.dist / FOG_FAR);
+		col = COLORIZE(h);
+		gl_FragColor = vec4(col, h.color.a);
+	}
+}
+
+void main( void ) {
+	rmdata.camera = camPos;
+	MAINPROG();
+}
+

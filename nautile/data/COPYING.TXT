@@ -1,0 +1,6 @@
+The data contained in this "data" folder is copyrighted. You can't use it without prior permission from the authors
+
+- The music "nautile9.mp3" was created and copyrighted by Frederic Condolo.
+- The image "oceanlogo.png" was created and copyrighted by Carlos Pardo.
+- The other images are random picks from Google Images (most of them were retouched before being used in this demo). Original authors could not be found.
+

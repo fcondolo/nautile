@@ -1,0 +1,355 @@
+{
+    sequence:[
+
+    {
+        time : 0,
+        setting : "default"
+    }],
+textures:[
+
+    {
+        file : "data/seatrees.jpg",
+        friendly : "Trees"
+    },
+    {
+        file : "data/noise.jpg",
+        friendly : "noise"
+    },
+    {
+        file : "data/groundleaves.jpg",
+        friendly : "lightmodifier"
+    },
+    {
+        file : "data/BWNoise.jpg",
+        friendly : "dust"
+    }],
+fields:[
+
+    {
+        name : 'camPos',
+        editor : {},
+        default_data : 
+            { values : [0.00, 3.00, 0.00],
+            }
+    },
+    {
+        name : 'camRot',
+        editor : {},
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'glowAmount',
+        editor : {type:'RGB', min:-2, max:2},
+        default_data : 
+            { values : [0.90, 1.00, 0.00],
+            }
+    },
+    {
+        name : 'glowColorSub',
+        editor : {type:'RGBA'},
+        default_data : 
+            { values : [0.02, 0.00, 0.38, 0.00],
+            }
+    },
+    {
+        name : 'glowBlurScale',
+        editor : {},
+        default_data : 
+            { values : [2.41, 2.47],
+            }
+    },
+    {
+        name : 'SnakeShine',
+        editor : {min:-2, max:2},
+        default_data : 
+            { values : [0.10],
+            }
+    },
+    {
+        name : 'SnakeColor',
+        editor : {type:'RGB', min:-2, max:2},
+        default_data : 
+            { values : [0.93, 0.84, 0.00],
+            }
+    },
+    {
+        name : 'Crisp',
+        editor : {},
+        default_data : 
+            { values : [0.05],
+            }
+    },
+    {
+        name : 'VoxelDist',
+        editor : {},
+        default_data : 
+            { values : [0.00],
+            }
+    },
+    {
+        name : 'GroundChaos',
+        editor : {},
+        default_data : 
+            { values : [0.10],
+            }
+    },
+    {
+        name : 'groundSquaresHeight',
+        editor : {},
+        default_data : 
+            { values : [100.00],
+            }
+    },
+    {
+        name : 'specularIntensity',
+        editor : {min:-2, max:2},
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'specularFallOff',
+        editor : {min:-2, max:2},
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'specularColor',
+        editor : {type:'RGB', min:-2, max:2},
+        default_data : 
+            { values : [1.00, 1.00, 1.00],
+            }
+    },
+    {
+        name : 'lightPosNormalized',
+        editor : {},
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'diffuseIntensity',
+        editor : {},
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'diffuseColor',
+        editor : {},
+        default_data : 
+            { values : [1.00, 1.00, 1.00],
+            }
+    },
+    {
+        name : 'focus',
+        editor : {},
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'near',
+        editor : {},
+        default_data : 
+            { values : [0.00],
+            }
+    },
+    {
+        name : 'far',
+        editor : {},
+        default_data : 
+            { values : [50.00],
+            }
+    },
+    {
+        name : 'fogfar',
+        editor : {},
+        default_data : 
+            { values : [50.00],
+            }
+    }],
+settings:[
+{ Setting_Name: "default",
+curves: [
+
+    { // camPos
+        looping : false,
+        data : [
+            { values : [0.00, 3.00, 0.00],
+            time : 88.542468}
+        ]
+    },
+    { // camRot
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 88.542468}
+        ]
+    },
+    { // glowAmount
+        looping : false,
+        data : [
+            { values : [0.90, 1.00, 0.00],
+            time : 88.542468}
+        ]
+    },
+    { // glowColorSub
+        looping : false,
+        data : [
+            { values : [0.02, 0.00, 0.38, 0.00],
+            time : 88.542468}
+        ]
+    },
+    { // glowBlurScale
+        looping : false,
+        data : [
+            { values : [2.41, 2.47],
+            time : 88.542468}
+        ]
+    },
+    { // SnakeShine
+        looping : true,
+        data : [
+            { values : [0.10],
+            time : 88.542468},
+            { values : [0.10],
+            time : 1149.1597236666667},
+            { values : [1.27],
+            time : 1150.1597236666667},
+            { values : [0.10],
+            time : 1151.1597236666667}
+        ]
+    },
+    { // SnakeColor
+        looping : false,
+        data : [
+            { values : [0.93, 0.84, 0.00],
+            time : 88.542468},
+            { values : [0.10, 0.10, 0.85],
+            time : 1156.1597236666667},
+            { values : [0.84, 0.87, 0.09],
+            time : 1166.1597236666669},
+            { values : [0.91, 0.08, 0.22],
+            time : 1176.1597236666669}
+        ]
+    },
+    { // Crisp
+        looping : false,
+        data : [
+            { values : [0.05],
+            time : 88.542468}
+        ]
+    },
+    { // VoxelDist
+        looping : false,
+        data : [
+            { values : [0.00],
+            time : 88.542468},
+            { values : [0.00],
+            time : 1156.0263903333334},
+            { values : [12.39],
+            time : 1186.0263903333334},
+            { values : [12.39],
+            time : 1206.0263903333334},
+            { values : [0.00],
+            time : 1216.0263903333334},
+            { values : [12.39],
+            time : 1226.0263903333334}
+        ]
+    },
+    { // GroundChaos
+        looping : false,
+        data : [
+            { values : [0.10],
+            time : 88.542468},
+            { values : [0.00],
+            time : 1160.7597236666668},
+            { values : [0.00],
+            time : 2145.7597236666666}
+        ]
+    },
+    { // groundSquaresHeight
+        looping : false,
+        data : [
+            { values : [100.00],
+            time : 88.542468}
+        ]
+    },
+    { // specularIntensity
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 88.542468}
+        ]
+    },
+    { // specularFallOff
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 88.542468}
+        ]
+    },
+    { // specularColor
+        looping : false,
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 88.542468}
+        ]
+    },
+    { // lightPosNormalized
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 88.542468}
+        ]
+    },
+    { // diffuseIntensity
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 88.542468}
+        ]
+    },
+    { // diffuseColor
+        looping : false,
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 88.542468}
+        ]
+    },
+    { // focus
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 88.542468}
+        ]
+    },
+    { // near
+        looping : false,
+        data : [
+            { values : [0.00],
+            time : 88.542468}
+        ]
+    },
+    { // far
+        looping : false,
+        data : [
+            { values : [50.00],
+            time : 88.542468}
+        ]
+    },
+    { // fogfar
+        looping : false,
+        data : [
+            { values : [50.00],
+            time : 88.542468}
+        ]
+    }
+]} // end of setting: default
+
+] // end of settings
+}

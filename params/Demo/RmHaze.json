@@ -1,0 +1,371 @@
+{
+    sequence:[
+
+    {
+        time : 0,
+        setting : "default"
+    }],
+textures:[
+
+    {
+        file : "data/fishes4.jpg",
+        friendly : "Texture 1"
+    },
+    {
+        file : "data/fishes.jpg",
+        friendly : "Texture2"
+    },
+    {
+        file : "data/yplanemodif.jpg",
+        friendly : "Text"
+    }],
+fields:[
+
+    {
+        name : 'camPos',
+        default_data : 
+            { values : [2.00, 2.00, 0.00],
+            }
+    },
+    {
+        name : 'camRot',
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'glowAmount',
+        editor : {type:'RGB', min:-2, max:2},
+        default_data : 
+            { values : [0.45, 0.45, 0.54],
+            }
+    },
+    {
+        name : 'glowColorSub',
+        editor : {type:'RGBA'},
+        default_data : 
+            { values : [-0.01, 0.37, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'glowBlurScale',
+        editor : {},
+        default_data : 
+            { values : [4.00, 4.00],
+            }
+    },
+    {
+        name : 'trailWeight',
+        editor : {},
+        default_data : 
+            { values : [0.50, 0.40, 0.30, 2.00],
+            }
+    },
+    {
+        name : 'dustLevel',
+        editor : {},
+        default_data : 
+            { values : [0.80],
+            }
+    },
+    {
+        name : 'dustSpacing',
+        editor : {min:-1, max:1},
+        default_data : 
+            { values : [10.00],
+            }
+    },
+    {
+        name : 'dustSpeed',
+        editor : {},
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'dustChroma',
+        editor : {},
+        default_data : 
+            { values : [0.32],
+            }
+    },
+    {
+        name : 'dustAlpha',
+        editor : {},
+        default_data : 
+            { values : [0.00, 100.00],
+            }
+    },
+    {
+        name : 'textureScale',
+        editor : {},
+        default_data : 
+            { values : [10.00],
+            }
+    },
+    {
+        name : 'shaping',
+        editor : {min:-10, max:10},
+        default_data : 
+            { values : [2.29, 0.00, 1.00],
+            }
+    },
+    {
+        name : 'texRatio',
+        editor : {},
+        default_data : 
+            { values : [0.00, 1.00],
+            }
+    },
+    {
+        name : 'lightPosNormalized',
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'diffuseIntensity',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'diffuseColor',
+        default_data : 
+            { values : [1.00, 1.00, 1.00],
+            }
+    },
+    {
+        name : 'specularIntensity',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'specularColor',
+        default_data : 
+            { values : [1.00, 1.00, 1.00],
+            }
+    },
+    {
+        name : 'specularFallOff',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'focus',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'near',
+        default_data : 
+            { values : [0.00],
+            }
+    },
+    {
+        name : 'far',
+        default_data : 
+            { values : [50.00],
+            }
+    },
+    {
+        name : 'fogfar',
+        default_data : 
+            { values : [50.00],
+            }
+    }],
+settings:[
+{ Setting_Name: "default",
+curves: [
+
+    { // camPos
+        looping : false,
+        data : [
+            { values : [2.00, 2.00, 0.00],
+            time : 120.704994},
+            { values : [2.00, 2.00, 700.00],
+            time : 2990.512126333333}
+        ]
+    },
+    { // camRot
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 120.704994},
+            { values : [10.00, 0.00, 0.00],
+            time : 2990.512126333333}
+        ]
+    },
+    { // glowAmount
+        looping : false,
+        data : [
+            { values : [0.45, 0.45, 0.54],
+            time : 120.704994},
+            { values : [1.00, 1.00, 1.00],
+            time : 2900.512126333333}
+        ]
+    },
+    { // glowColorSub
+        looping : false,
+        data : [
+            { values : [-0.01, 0.37, 0.00, 0.00],
+            time : 120.704994}
+        ]
+    },
+    { // glowBlurScale
+        looping : false,
+        data : [
+            { values : [4.00, 4.00],
+            time : 120.704994}
+        ]
+    },
+    { // trailWeight
+        looping : false,
+        data : [
+            { values : [0.50, 0.40, 0.30, 2.00],
+            time : 120.704994}
+        ]
+    },
+    { // dustLevel
+        looping : false,
+        data : [
+            { values : [0.80],
+            time : 120.704994}
+        ]
+    },
+    { // dustSpacing
+        looping : false,
+        data : [
+            { values : [10.00],
+            time : 120.704994}
+        ]
+    },
+    { // dustSpeed
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 120.704994}
+        ]
+    },
+    { // dustChroma
+        looping : false,
+        data : [
+            { values : [0.32],
+            time : 120.704994}
+        ]
+    },
+    { // dustAlpha
+        looping : false,
+        data : [
+            { values : [0.00, 100.00],
+            time : 120.704994},
+            { values : [100.00, 0.00],
+            time : 2910.4787929999998},
+            { values : [100.00, 0.00],
+            time : 2930.312126333333}
+        ]
+    },
+    { // textureScale
+        looping : false,
+        data : [
+            { values : [10.00],
+            time : 120.704994}
+        ]
+    },
+    { // shaping
+        looping : false,
+        data : [
+            { values : [2.29, 0.00, 1.00],
+            time : 120.704994},
+            { values : [1.78, 2.80, 1.00],
+            time : 2910.4787929999998}
+        ]
+    },
+    { // texRatio
+        looping : false,
+        data : [
+            { values : [0.00, 1.00],
+            time : 120.704994},
+            { values : [1.00, 0.51],
+            time : 2900.512126333333},
+            { values : [1.00, 0.00],
+            time : 2910.512126333333}
+        ]
+    },
+    { // lightPosNormalized
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 120.704994}
+        ]
+    },
+    { // diffuseIntensity
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 120.704994}
+        ]
+    },
+    { // diffuseColor
+        looping : false,
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 120.704994}
+        ]
+    },
+    { // specularIntensity
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 120.704994}
+        ]
+    },
+    { // specularColor
+        looping : false,
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 120.704994}
+        ]
+    },
+    { // specularFallOff
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 120.704994}
+        ]
+    },
+    { // focus
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 120.704994}
+        ]
+    },
+    { // near
+        looping : false,
+        data : [
+            { values : [0.00],
+            time : 120.704994}
+        ]
+    },
+    { // far
+        looping : false,
+        data : [
+            { values : [50.00],
+            time : 120.704994}
+        ]
+    },
+    { // fogfar
+        looping : false,
+        data : [
+            { values : [50.00],
+            time : 120.704994}
+        ]
+    }
+]} // end of setting: default
+
+] // end of settings
+}

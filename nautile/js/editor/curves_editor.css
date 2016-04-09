@@ -1,0 +1,51 @@
+body {
+    background-color: #333333;
+	font-family: Sans-Serif;
+	color: dddddd;
+}
+
+.toolBar {
+	right : 0px;
+	background-color:#888888;
+	position : fixed;
+}
+
+.statusBar {
+	left : 0px;
+	bottom : 0px;
+	width : 100%;
+	background-color:#777777;
+	position : fixed;
+}
+
+.titleBar {
+	left : 0px;
+	top : 0px;
+	width : 100%;
+	background-color:#777777;
+	position : fixed;
+}
+
+.pickable {
+	width : 2%;
+	height : 2%;
+	background-color:#1ae893;
+	position : fixed;
+	z-index : 200;
+	cursor:move;
+	-webkit-border-radius: 50%; 
+	-moz-border-radius: 50%;   
+	border-radius : 50%;
+}
+
+.selected {
+	width : 8%;
+	height : 8%;
+	background-color:#bf1ae8;
+	position : fixed;
+	z-index : 200;
+	cursor:move;
+	-webkit-border-radius: 50%; 
+	-moz-border-radius: 50%;   
+	border-radius : 50%;
+}

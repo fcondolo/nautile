@@ -1,0 +1,312 @@
+{
+    sequence:[
+
+    {
+        time : 0,
+        setting : "default"
+    }],
+textures:[
+
+    {
+        file : "data/abstract1.jpg",
+        friendly : "Ground Seeds 1"
+    },
+    {
+        file : "data/abstract2.jpg",
+        friendly : "Ground Seeds 2"
+    },
+    {
+        file : "data/lensflare.jpg",
+        friendly : "Envmap"
+    },
+    {
+        file : "data/causticbuildings.jpg",
+        friendly : "Buildings Texture"
+    },
+    {
+        file : "data/BWNoise.jpg",
+        friendly : "noise"
+    }],
+fields:[
+
+    {
+        name : 'radius',
+        editor : {min:0.5, max:15},
+        default_data : 
+            { values : [6.00],
+            }
+    },
+    {
+        name : 'repeat',
+        editor : {min:1, max:20},
+        default_data : 
+            { values : [10.00, 10.00, 10.00],
+            }
+    },
+    {
+        name : 'fatEdges',
+        editor : {min:0.0001, max:0.2},
+        default_data : 
+            { values : [0.01, 0.01],
+            }
+    },
+    {
+        name : 'edgesColor',
+        editor : {type:'RGB', max:1},
+        default_data : 
+            { values : [0.17, 0.25, 0.21],
+            }
+    },
+    {
+        name : 'ground',
+        editor : {min:-100, max:100},
+        default_data : 
+            { values : [0.00],
+            }
+    },
+    {
+        name : 'glowAmount',
+        editor : {type:'RGB', min:-2, max:2},
+        default_data : 
+            { values : [1.00, 1.00, 1.00],
+            }
+    },
+    {
+        name : 'glowColorSub',
+        editor : {type:'RGBA'},
+        default_data : 
+            { values : [0.14, 0.14, 0.14, 0.00],
+            }
+    },
+    {
+        name : 'glowBlurScale',
+        editor : {},
+        default_data : 
+            { values : [1.00, 1.00],
+            }
+    },
+    {
+        name : 'camPos',
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'camRot',
+        default_data : 
+            { values : [0.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'lightPosNormalized',
+        default_data : 
+            { values : [1.00, 0.00, 0.00],
+            }
+    },
+    {
+        name : 'diffuseIntensity',
+        editor : {max:1},
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'diffuseColor',
+        editor : {type:'RGBA'},
+        default_data : 
+            { values : [0.11, 0.32, 0.49],
+            }
+    },
+    {
+        name : 'specularIntensity',
+        editor : {min:0.01, max:2},
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'specularColor',
+        editor : {type:'RGBA'},
+        default_data : 
+            { values : [0.24, 0.05, 0.75],
+            }
+    },
+    {
+        name : 'specularFallOff',
+        editor : {min:1, max:5},
+        default_data : 
+            { values : [3.00],
+            }
+    },
+    {
+        name : 'focus',
+        default_data : 
+            { values : [1.00],
+            }
+    },
+    {
+        name : 'near',
+        default_data : 
+            { values : [0.00],
+            }
+    },
+    {
+        name : 'far',
+        default_data : 
+            { values : [50.00],
+            }
+    },
+    {
+        name : 'fogfar',
+        default_data : 
+            { values : [50.00],
+            }
+    }],
+settings:[
+{ Setting_Name: "default",
+curves: [
+
+    { // radius
+        looping : false,
+        data : [
+            { values : [6.00],
+            time : 39.019065}
+        ]
+    },
+    { // repeat
+        looping : false,
+        data : [
+            { values : [10.00, 10.00, 10.00],
+            time : 39.019065}
+        ]
+    },
+    { // fatEdges
+        looping : false,
+        data : [
+            { values : [0.01, 0.01],
+            time : 39.019065}
+        ]
+    },
+    { // edgesColor
+        looping : false,
+        data : [
+            { values : [0.17, 0.25, 0.21],
+            time : 39.019065}
+        ]
+    },
+    { // ground
+        looping : false,
+        data : [
+            { values : [0.00],
+            time : 39.019065}
+        ]
+    },
+    { // glowAmount
+        looping : false,
+        data : [
+            { values : [1.00, 1.00, 1.00],
+            time : 39.019065}
+        ]
+    },
+    { // glowColorSub
+        looping : false,
+        data : [
+            { values : [0.14, 0.14, 0.14, 0.00],
+            time : 39.019065}
+        ]
+    },
+    { // glowBlurScale
+        looping : false,
+        data : [
+            { values : [1.00, 1.00],
+            time : 39.019065}
+        ]
+    },
+    { // camPos
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 39.019065}
+        ]
+    },
+    { // camRot
+        looping : false,
+        data : [
+            { values : [0.00, 0.00, 0.00],
+            time : 39.019065}
+        ]
+    },
+    { // lightPosNormalized
+        looping : false,
+        data : [
+            { values : [1.00, 0.00, 0.00],
+            time : 39.019065}
+        ]
+    },
+    { // diffuseIntensity
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 39.019065}
+        ]
+    },
+    { // diffuseColor
+        looping : false,
+        data : [
+            { values : [0.11, 0.32, 0.49],
+            time : 39.019065}
+        ]
+    },
+    { // specularIntensity
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 39.019065}
+        ]
+    },
+    { // specularColor
+        looping : false,
+        data : [
+            { values : [0.24, 0.05, 0.75],
+            time : 39.019065}
+        ]
+    },
+    { // specularFallOff
+        looping : false,
+        data : [
+            { values : [3.00],
+            time : 39.019065}
+        ]
+    },
+    { // focus
+        looping : false,
+        data : [
+            { values : [1.00],
+            time : 39.019065}
+        ]
+    },
+    { // near
+        looping : false,
+        data : [
+            { values : [0.00],
+            time : 39.019065}
+        ]
+    },
+    { // far
+        looping : false,
+        data : [
+            { values : [50.00],
+            time : 39.019065}
+        ]
+    },
+    { // fogfar
+        looping : false,
+        data : [
+            { values : [50.00],
+            time : 39.019065}
+        ]
+    }
+]} // end of setting: default
+
+] // end of settings
+}
